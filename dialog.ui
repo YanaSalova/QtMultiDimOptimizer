@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>408</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:violet;
+</string>
+  </property>
+  <widget class="QGroupBox" name="methodGroup">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Method</string>
+   </property>
+   <widget class="QRadioButton" name="gradient">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>111</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Gradient descent </string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="random">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>101</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Random search</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QListWidget" name="funcList">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>311</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Rozenbroke: (1-x^2) + 100(y-x^2)^2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Func 2: (x + 2y - 7)^2 + (2x + y - 5)^2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Func 3: 0.26(x^2 + y^2) - 0.48xy</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QGroupBox" name="criterionGroup">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>131</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Stop criterion</string>
+   </property>
+   <widget class="QRadioButton" name="numCriterion">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>84</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Num of iter</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="absCriterion">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>84</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Abs value</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>140</y>
+     <width>131</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="iterPrecForm">
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="maxIterationLineEdit">
+      <property name="styleSheet">
+       <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="precisionLabel">
+      <property name="text">
+       <string>Precision</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="precisionLineEdit">
+      <property name="styleSheet">
+       <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="maxIterationLabel">
+      <property name="text">
+       <string>Max iteration</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>260</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="startGroup">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>230</y>
+     <width>81</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Start point</string>
+   </property>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>61</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="startForm">
+     <item row="0" column="0">
+      <widget class="QLabel" name="xLabel">
+       <property name="text">
+        <string>x</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="xLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="yLabel">
+       <property name="text">
+        <string>y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="yLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="funcDomainGroup">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>230</y>
+     <width>301</width>
+     <height>131</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Function domain</string>
+   </property>
+   <widget class="QGroupBox" name="xRangeGroup">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>121</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>x range</string>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>101</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="xRangeForm">
+      <item row="0" column="0">
+       <widget class="QLabel" name="xminLabel">
+        <property name="text">
+         <string>min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="xminLineEdit">
+        <property name="styleSheet">
+         <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="xmaxLabel">
+        <property name="text">
+         <string>max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="xmaxLineEdit">
+        <property name="styleSheet">
+         <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="yRangeGroup">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>20</y>
+      <width>120</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>y range</string>
+    </property>
+    <widget class="QWidget" name="formLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>91</width>
+       <height>59</height>
+      </rect>
+     </property>
+     <layout class="QFormLayout" name="yRangeForm">
+      <item row="0" column="0">
+       <widget class="QLabel" name="yminLabel">
+        <property name="text">
+         <string>min</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="yminLineEdit">
+        <property name="styleSheet">
+         <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="ymaxLabel">
+        <property name="text">
+         <string>max</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="ymaxLineEdit">
+        <property name="styleSheet">
+         <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="randomForm_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>130</y>
+     <width>166</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="randomForm">
+    <item row="0" column="0">
+     <widget class="QLabel" name="deltaLabel">
+      <property name="text">
+       <string>Delta</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="deltaLineEdit">
+      <property name="styleSheet">
+       <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="alphaLabel">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="text">
+       <string>Alpha</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="alphaLineEdit">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="probabilityLabel">
+      <property name="text">
+       <string>Probability</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="probabilityLineEdit">
+      <property name="styleSheet">
+       <string notr="true">background:rgba(255,255,255,0.4);
+border-radius:8px;
+border:1px solid rgba(0,0,0, 0.2);</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>349</x>
+     <y>370</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+border-radius:12px;
+border:1px solid rgba(0,0,0,0.4);
+background:rgba(255,255,255,0.2);</string>
+   </property>
+   <property name="text">
+    <string>Set changes</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
